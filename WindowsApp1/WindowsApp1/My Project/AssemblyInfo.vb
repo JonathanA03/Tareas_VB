@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Factura")>
+<Assembly: AssemblyTitle("WindowsApp1")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Factura")>
+<Assembly: AssemblyProduct("WindowsApp1")>
 <Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("70358451-be31-4954-afa1-de6f88c1fbc4")>
+<Assembly: Guid("aaa079db-bedb-44d6-ba32-2b5a0d61064b")>
 
 ' Version information for an assembly consists of the following four values:
 '
