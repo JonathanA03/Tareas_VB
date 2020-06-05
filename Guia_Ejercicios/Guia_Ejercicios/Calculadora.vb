@@ -93,10 +93,11 @@
         OperacionBasica = ""
         If Resultado = Resultado / 0 Then
             txtResultado.Text = "ERROR"
-
+            lstHistorial.Text = ""
         Else
-            Resultado = Resultado / Valor
+            lstHistorial.Items.Add(txtResultado.Text)
         End If
+
     End Sub
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         txtResultado.Text = ""
@@ -120,7 +121,7 @@
                     Resultado = Resultado / Valor
             End Select
             txtResultado.Text = Resultado
-            lstHistorial.Items.Add(txtResultado.Text)
+
         Else
             Resultado = Valor
         End If
