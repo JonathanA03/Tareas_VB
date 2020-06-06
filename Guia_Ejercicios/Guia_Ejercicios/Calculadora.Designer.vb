@@ -312,6 +312,7 @@ Partial Class Calculadora
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Calculadora"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calculadora"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
