@@ -22,6 +22,7 @@ Partial Class Números_Acumulados
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Números_Acumulados))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.label = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -38,6 +39,8 @@ Partial Class Números_Acumulados
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbNumeros = New System.Windows.Forms.ComboBox()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -177,11 +180,24 @@ Partial Class Números_Acumulados
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 218)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(78, 41)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
+        '
         'Números_Acumulados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 259)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ClientSize = New System.Drawing.Size(490, 271)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.cmbNumeros)
         Me.Controls.Add(Me.Label2)
@@ -201,6 +217,7 @@ Partial Class Números_Acumulados
         Me.Name = "Números_Acumulados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Números_Acumulados"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -222,4 +239,5 @@ Partial Class Números_Acumulados
     Friend WithEvents Label2 As Label
     Friend WithEvents cmbNumeros As ComboBox
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

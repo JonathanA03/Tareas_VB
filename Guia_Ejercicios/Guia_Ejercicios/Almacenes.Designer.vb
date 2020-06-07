@@ -22,6 +22,7 @@ Partial Class Almacenes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Almacenes))
         Me.txtMedia = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lstMedia = New System.Windows.Forms.ListBox()
@@ -32,10 +33,13 @@ Partial Class Almacenes
         Me.btnCalcular = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtMedia
         '
+        Me.txtMedia.Enabled = False
         Me.txtMedia.Location = New System.Drawing.Point(146, 152)
         Me.txtMedia.Name = "txtMedia"
         Me.txtMedia.Size = New System.Drawing.Size(137, 22)
@@ -52,9 +56,10 @@ Partial Class Almacenes
         '
         'lstMedia
         '
+        Me.lstMedia.Enabled = False
         Me.lstMedia.FormattingEnabled = True
         Me.lstMedia.ItemHeight = 16
-        Me.lstMedia.Location = New System.Drawing.Point(146, 199)
+        Me.lstMedia.Location = New System.Drawing.Point(213, 199)
         Me.lstMedia.Name = "lstMedia"
         Me.lstMedia.Size = New System.Drawing.Size(179, 180)
         Me.lstMedia.TabIndex = 2
@@ -62,7 +67,7 @@ Partial Class Almacenes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 87)
+        Me.Label2.Location = New System.Drawing.Point(12, 103)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 17)
         Me.Label2.TabIndex = 3
@@ -70,7 +75,7 @@ Partial Class Almacenes
         '
         'txtVenta
         '
-        Me.txtVenta.Location = New System.Drawing.Point(131, 87)
+        Me.txtVenta.Location = New System.Drawing.Point(131, 103)
         Me.txtVenta.Name = "txtVenta"
         Me.txtVenta.Size = New System.Drawing.Size(131, 22)
         Me.txtVenta.TabIndex = 4
@@ -80,7 +85,7 @@ Partial Class Almacenes
         Me.cmbAlmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbAlmacen.FormattingEnabled = True
         Me.cmbAlmacen.Items.AddRange(New Object() {"Las Flores", "El Tigre", "El Oro", "El Rey", "Banasupro", "Lempirita", "Tilapia", "Los Hermanos", "La Suegra", "El Visual Basic"})
-        Me.cmbAlmacen.Location = New System.Drawing.Point(131, 53)
+        Me.cmbAlmacen.Location = New System.Drawing.Point(131, 73)
         Me.cmbAlmacen.Name = "cmbAlmacen"
         Me.cmbAlmacen.Size = New System.Drawing.Size(131, 24)
         Me.cmbAlmacen.TabIndex = 5
@@ -88,7 +93,7 @@ Partial Class Almacenes
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 53)
+        Me.Label3.Location = New System.Drawing.Point(12, 73)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 17)
         Me.Label3.TabIndex = 6
@@ -96,7 +101,7 @@ Partial Class Almacenes
         '
         'btnCalcular
         '
-        Me.btnCalcular.Location = New System.Drawing.Point(298, 87)
+        Me.btnCalcular.Location = New System.Drawing.Point(317, 87)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(75, 23)
         Me.btnCalcular.TabIndex = 7
@@ -105,7 +110,7 @@ Partial Class Almacenes
         '
         'btnIngresar
         '
-        Me.btnIngresar.Location = New System.Drawing.Point(298, 50)
+        Me.btnIngresar.Location = New System.Drawing.Point(317, 50)
         Me.btnIngresar.Name = "btnIngresar"
         Me.btnIngresar.Size = New System.Drawing.Size(75, 27)
         Me.btnIngresar.TabIndex = 8
@@ -114,18 +119,31 @@ Partial Class Almacenes
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(250, 385)
+        Me.btnLimpiar.Location = New System.Drawing.Point(317, 385)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(75, 28)
         Me.btnLimpiar.TabIndex = 9
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 395)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(62, 43)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 10
+        Me.PictureBox1.TabStop = False
+        '
         'Almacenes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(404, 450)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ClientSize = New System.Drawing.Size(404, 447)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.btnCalcular)
@@ -136,9 +154,11 @@ Partial Class Almacenes
         Me.Controls.Add(Me.lstMedia)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtMedia)
+        Me.DoubleBuffered = True
         Me.Name = "Almacenes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Almacenes"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -154,4 +174,5 @@ Partial Class Almacenes
     Friend WithEvents btnCalcular As Button
     Friend WithEvents btnIngresar As Button
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

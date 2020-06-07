@@ -43,6 +43,13 @@
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Limpiar()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Form1.Show()
+        Me.Close()
+        Limpiar()
+
+    End Sub
     Public Sub Limpiar()
         txtPositivos.Text = ""
         txtNegativos.Text = ""

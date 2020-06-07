@@ -120,6 +120,12 @@
     <Compile Include="Números_Acumulados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SAR.Designer.vb">
+      <DependentUpon>SAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SAR.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Almacenes.resx">
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Números_Acumulados.resx">
       <DependentUpon>Números_Acumulados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAR.resx">
+      <DependentUpon>SAR.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

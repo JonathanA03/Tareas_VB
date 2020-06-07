@@ -6,7 +6,7 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
         Form1.Show()
-        Me.Hide()
+        Me.Close()
         lstHistorial.Items.Clear()
         txtResultado.Text = ""
     End Sub

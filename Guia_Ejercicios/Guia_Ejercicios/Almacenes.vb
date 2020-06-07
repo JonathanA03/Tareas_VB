@@ -16,6 +16,13 @@
                 If txtVenta.Text = "0" Or txtVenta.Text < 0 Then
                     MessageBox.Show("Ingrese valores positivos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtVenta.Text = ""
+                    btnCalcular.Enabled = False
+                Else
+                    btnCalcular.Enabled = True
+                End If
+                If cmbAlmacen.Text = "" Then
+                    MsgBox("Seleccione un alamacen")
+                    txtVenta.Text = ""
                 End If
                 If cmbAlmacen.Text = "Las Flores" Then
                     almacen1 = Val(txtVenta.Text)
@@ -58,7 +65,9 @@
 
     End Sub
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
+        lstMedia.Items.Clear()
         txtMedia.Text = media
+
         If media < almacen1 Then
             lstMedia.Items.Add("Las Flores")
         End If
@@ -95,5 +104,19 @@
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         lstMedia.Items.Clear()
         txtMedia.Text = ""
+        txtVenta.Text = ""
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Form1.Show()
+        Me.Close()
+        txtVenta.Text = ""
+        cmbAlmacen.Text = ""
+        lstMedia.Items.Clear()
+        txtMedia.Text = ""
+    End Sub
+
+    Private Sub Almacenes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnCalcular.Enabled = False
     End Sub
 End Class
